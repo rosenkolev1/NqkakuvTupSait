@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "CellsGame";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Play a game of cells</p>
+    <form class="mx-auto half-width" asp-controller="CellsGame" asp-action="Create" method="post">
+        <div class="form-group">
+            <label for="gridRows">Grid Rows</label>
+            <input type="number" step="1" class="form-control" id="gridRows" placeholder="Grid Rows..." name="gridRows">
+        </div>
+        <div class="form-group">
+            <label for="gridColumns">Grid Columns</label>
+            <input type="number" step="1" class="form-control" id="gridColumns" placeholder="Grid Columns..." name="gridColumns">
+        </div>
+        <div class="form-group">
+            <label for="gridLines">Grid rows(0=red and 1=green) seperated by semicolons(;) <b>without any spaces</b></label>
+            <input type="text" class="form-control" id="gridLines" placeholder="Grid lines..." name="gridLines">
+        </div>
+        <label>Target cell</label>
+        <div class="form-group">
+            <label style="display:inline" for="targetRow">Row</label>
+            <input style="display:inline" type="number" step="1" class="form-control" id="targetRow" placeholder="Row" name="targetCellRow">
+            <label style="display:inline" for="targetCol">Col</label>
+            <input style="display:inline" type="number" step="1" class="form-control" id="targetCol" placeholder="Col" name="targetCellCol">
+        </div>
+        <div class="form-group">
+            <label for="countOfGenerations">Generations(number)</label>
+            <input type="number" step="1" class="form-control" id="countOfGenerations" placeholder="Generation..." name="countOfGenerations">
+        </div>
+        <div class="button-holder d-flex justify-content-center">
+            <button type="submit" class="btn ">Play</button>
+        </div>
+    </form>
+</div>
+
